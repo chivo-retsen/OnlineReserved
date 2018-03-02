@@ -9,4 +9,61 @@
         <property name="prefix" value="/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
+    <context:component-scan base-package="com.reservation"/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- Database Information -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+          destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url"
+                  value="jdbc:mysql://localhost:3306/reserved_tickets"/>
+        <property name="username" value="root"/>
+        <property name="password" value="admin"/>
+    </bean>
+
+    <!--&lt;!&ndash; Hibernate 4 SessionFactory Bean definition &ndash;&gt;-->
+    <!--<bean id="hibernate4AnnotatedSessionFactory"-->
+          <!--class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">-->
+        <!--<property name="dataSource" ref="dataSource"/>-->
+        <!--<property name="annotatedClasses">-->
+            <!--<list>-->
+                <!--<value>com.reservation.entity.CinemaEntity</value>-->
+                <!--&lt;!&ndash;проверить нужно ли добавлять другие классы&ndash;&gt;-->
+            <!--</list>-->
+        <!--</property>-->
+        <!--<property name="hibernateProperties">-->
+            <!--<props>-->
+                <!--<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect-->
+                <!--</prop>-->
+                <!--<prop key="hibernate.show_sql">true</prop>-->
+            <!--</props>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--&lt;!&ndash;BookDao and BookService beans&ndash;&gt;-->
+    <!--<bean id="bookDao" class="net.proselyte.bookmanager.dao.BookDaoImpl">-->
+        <!--<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="bookService" class="net.proselyte.bookmanager.service.BookServiceImpl">-->
+        <!--<property name="bookDao" ref="bookDao"/>-->
+    <!--</bean>-->
+
+    <!--<context:component-scan base-package="net.proselyte.bookmanager"/>-->
+
+    <!--<tx:annotation-driven transaction-manager="transactionManager"/>-->
+
+    <!--<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">-->
+        <!--<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>-->
+    <!--</bean>-->
+
+    <!--<mvc:default-servlet-handler/>-->
+    <!--<mvc:annotation-driven/>-->
+
 </beans>
