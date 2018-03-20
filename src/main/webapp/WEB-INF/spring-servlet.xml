@@ -1,40 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-    <context:component-scan base-package="com.reservation.сontroller"/>
+    <!--<context:component-scan base-package="com.reservation.controller"/>-->
+                   <!-- 1:38:25  Разработка MVC приложения на Java за два часа | Компьютерная школа Hillel  -->
+    <!--<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+        <!--<property name="prefix" value="/"/>-->
+        <!--<property name="suffix" value=".jsp"/>-->
+    <!--</bean>-->
 
-    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
+    <!--<context:annotation-config></context:annotation-config>-->
+    <!--<context:component-scan base-package="com.reservation"/>-->
 
-    <context:component-scan base-package="com.reservation"/>
+    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+        <!--<property name="prefix" value="/WEB-INF/pages/"/>-->
+        <!--<property name="suffix" value=".jsp"/>-->
+    <!--</bean>-->
 
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/pages/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
+    <!--&lt;!&ndash; Database Information &ndash;&gt;-->
+    <!--<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"-->
+          <!--destroy-method="close">-->
+        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+        <!--<property name="url"-->
+                  <!--value="jdbc:mysql://localhost:3306/reserved_tickets"/>-->
+        <!--<property name="username" value="root"/>-->
+        <!--<property name="password" value="admin"/>-->
+    <!--</bean>-->
 
-    <!-- Database Information -->
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-          destroy-method="close">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url"
-                  value="jdbc:mysql://localhost:3306/reserved_tickets"/>
-        <property name="username" value="root"/>
-        <property name="password" value="admin"/>
-    </bean>
-
-    <!--&lt;!&ndash; Hibernate 4 SessionFactory Bean definition &ndash;&gt;-->
-    <!--<bean id="hibernate4AnnotatedSessionFactory"-->
+    <!--&lt;!&ndash; Hibernate 5 SessionFactory Bean definition &ndash;&gt;-->
+    <!--<bean id="hibernate5AnnotatedSessionFactory"-->
           <!--class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">-->
         <!--<property name="dataSource" ref="dataSource"/>-->
         <!--<property name="annotatedClasses">-->
             <!--<list>-->
                 <!--<value>com.reservation.entity.CinemaEntity</value>-->
-                <!--&lt;!&ndash;проверить нужно ли добавлять другие классы&ndash;&gt;-->
+                <!--&lt;!&ndash;проверить. добавить другие классы&ndash;&gt;-->
             <!--</list>-->
         <!--</property>-->
         <!--<property name="hibernateProperties">-->
@@ -46,23 +49,24 @@
         <!--</property>-->
     <!--</bean>-->
 
-    <!--&lt;!&ndash;BookDao and BookService beans&ndash;&gt;-->
-    <!--<bean id="bookDao" class="net.proselyte.bookmanager.dao.BookDaoImpl">-->
-        <!--<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>-->
+    <!--&lt;!&ndash;&lt;!&ndash;CinemaDao and CinemaService beans&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;<bean id="CinemaDao" class="com.reservation.dao.impl.CinemaDaoImpl">&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="Session" ref="hibernate5AnnotatedSessionFactory"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;</bean>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<bean id="CinemaService" class="com.reservation.service.impl.CinemaServiceImpl">&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="cinemaDao" ref="CinemaDao"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;</bean>&ndash;&gt;-->
+
+    <!--<context:component-scan base-package="com.reservation"/>-->
+
+    <!--&lt;!&ndash;<tx:annotation-driven transaction-manager="transactionManager"/>&ndash;&gt;-->
+
+    <!--<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">-->
+        <!--<property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory"/>-->
     <!--</bean>-->
 
-    <!--<bean id="bookService" class="net.proselyte.bookmanager.service.BookServiceImpl">-->
-        <!--<property name="bookDao" ref="bookDao"/>-->
-    <!--</bean>-->
-
-    <!--<context:component-scan base-package="net.proselyte.bookmanager"/>-->
-
-    <!--<tx:annotation-driven transaction-manager="transactionManager"/>-->
-
-    <!--<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">-->
-        <!--<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>-->
-    <!--</bean>-->
-
+                <!--   mvc:annotation  ->  1:36:15 Разработка MVC приложения на Java за два часа | Компьютерная школа Hillel-->
     <!--<mvc:default-servlet-handler/>-->
     <!--<mvc:annotation-driven/>-->
 

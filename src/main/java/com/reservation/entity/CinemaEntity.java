@@ -6,6 +6,11 @@ import javax.persistence.*;
 @Table(name = "cinema")
 public class CinemaEntity extends BaseEntity {
 
+
+    @Basic
+    @Column(name = "id")
+    private long id;
+
     @Basic  //расширить знания
     @Column(name = "name")
     private String name;
@@ -13,6 +18,19 @@ public class CinemaEntity extends BaseEntity {
     @Basic
     @Column(name = "address")
     private String address;
+
+
+//    public CinemaEntity() {
+//    }
+
+    @Override
+    public long getId() {
+    return id;
+}
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

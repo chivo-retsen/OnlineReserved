@@ -2,11 +2,14 @@ package com.reservation.dao.impl;
 
 import com.reservation.dao.CinemaDao;
 import com.reservation.entity.CinemaEntity;
+import com.reservation.mapper.UserMapper;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,10 +17,47 @@ import java.util.List;
 @Repository
 public class CinemaDaoImpl extends BaseDaoImpl implements CinemaDao {
 
+    @Autowired
+    public JdbcTemplate jdbcTemplate;
+
     private static final Logger logger = LoggerFactory.getLogger(CinemaDaoImpl.class);
 
+    @Autowired
+    public CinemaDaoImpl(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 
-    //@Override /должно появляться автоматически или прописывать?
+
+
+   // заполнить методы! (создать соединение с базой данных)
+
+
+
+
+
+
+//    public void create(CinemaEntity cinemaEntity) {
+//
+//    }
+//
+//    public CinemaEntity read(long id) {
+//        return null;
+//    }
+//
+//    public void update(CinemaEntity cinemaEntity) {
+//
+//    }
+//
+//    public void delete(long id) {
+//
+//    }
+//
+//    public List getAll() {
+//        String sql = "SELECT * FROM user";
+//        return jdbcTemplate.query(sql, new UserMapper());
+//    }
+
+
     public void create(CinemaEntity cinemaEntity) {
         Session session = getSessionAndBeginTransaction();
         session.save(cinemaEntity);

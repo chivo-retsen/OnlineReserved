@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Lenovo
-  Date: 27.02.2018
-  Time: 11:47
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -12,5 +6,12 @@
 </head>
 <body>
 Hello, world!
+<br/>
+<a href="/cinema"> Cinema list</a>
+<br/>
+<a href="/hello"> hello page</a>
+<br/>
+
+
 </body>
 </html>
