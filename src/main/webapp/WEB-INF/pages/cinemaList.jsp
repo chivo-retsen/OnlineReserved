@@ -26,6 +26,6 @@
         </tr>
 </#list>
 </table>
-<a href="createCinema.ftl">Create cinema</a>
+<a href="createCinema.jsp">Create cinema</a>
 </body>
 </html>

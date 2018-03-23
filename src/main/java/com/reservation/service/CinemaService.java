@@ -14,5 +14,5 @@ public interface CinemaService extends BaseService{
     void update(CinemaEntity cinemaEntity);
 
     //delete
-    void delete(int id); //проверить принимаемые параметры (long id) или (CinemaEntity cinemaEntity)
+    void delete(int id);
 }

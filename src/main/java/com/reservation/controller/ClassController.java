@@ -18,10 +18,6 @@ public class ClassController {
 
    // @Autowired(required = false)               //Конструкция require=false сообщает фреймворку о том, что наличие соответствующего bean'а не является обязательным при компиляции программы.
    // @Qualifier(value = "cinemaServiceImpl")       //С помощью аннотации @Qualifier можно отметить конкретного кандидата для автозаполнения если кандидатов несколько
-//    @Qualifier("getCinemaService")
-//    public void setCinemaService( CinemaService cinemaService) {
-//        this.cinemaService = cinemaService;
-//    }
 
    @GetMapping("/hello")
    public String hello(){
