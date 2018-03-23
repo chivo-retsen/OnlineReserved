@@ -3,7 +3,7 @@ CREATE DATABASE  IF NOT EXISTS `reserved_tickets` DEFAULT CHARACTER SET utf8 ;
 USE `reserved_tickets`;
 
 CREATE TABLE `reserved_tickets`.`cinema` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
   `address` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`));

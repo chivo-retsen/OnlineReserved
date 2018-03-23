@@ -8,11 +8,11 @@ public interface CinemaService extends BaseService{
     void create(CinemaEntity cinemaEntity);
 
     //read
-    CinemaEntity read(long id);
+    CinemaEntity read(int id);
 
     //update
     void update(CinemaEntity cinemaEntity);
 
     //delete
-    void delete(long id); //проверить принимаемые параметры (long id) или (CinemaEntity cinemaEntity)
+    void delete(int id); //проверить принимаемые параметры (long id) или (CinemaEntity cinemaEntity)
 }

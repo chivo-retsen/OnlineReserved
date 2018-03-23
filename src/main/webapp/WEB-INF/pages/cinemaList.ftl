@@ -13,15 +13,19 @@
         <th>Name</th>
         <th>Address</th>
     </tr>
-<#--<#list listCinema as cinema>-->
-        <#--<tr>-->
-            <#--<td>${cinema.id}</td>-->
-            <#--<td>${cinema.name}</td>-->
-            <#--<td>${cinema.address}</td>-->
+<#list listCinema as cinema>
+        <tr>
+            <td>${cinema.id}</td>
+            <td><a href="/cinema/${cinema.id}">${cinema.name}</a></td>
+            <td>${cinema.address}</td>
+
+            <td><a href="/deleteCinema/${cinema.id}">delete</a></td>
+            <td><a href="/updateCinema/${cinema.id}">update</a></td>
 
 
-        <#--</tr>-->
-<#--</#list>-->
+        </tr>
+</#list>
 </table>
+<a href="createCinema.ftl">Create cinema</a>
 </body>
 </html>

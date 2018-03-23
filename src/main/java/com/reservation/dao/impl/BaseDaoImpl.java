@@ -12,7 +12,9 @@ public abstract class BaseDaoImpl implements BaseDao {
         SessionFactory sessionFactory = HibernateSessionFactory.getSessionFactory();
         if(sessionFactory == null){
             throw new RuntimeException("Session factory is null");
+
         }
+
         Session session = sessionFactory.getCurrentSession();
         try{
             session.beginTransaction();

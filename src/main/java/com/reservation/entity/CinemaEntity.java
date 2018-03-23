@@ -4,12 +4,12 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "cinema")
-public class CinemaEntity extends BaseEntity {
+public class CinemaEntity extends BaseEntity {  
 
 
     @Basic
     @Column(name = "id")
-    private long id;
+    private int id;
 
     @Basic  //расширить знания
     @Column(name = "name")
@@ -20,15 +20,15 @@ public class CinemaEntity extends BaseEntity {
     private String address;
 
 
-//    public CinemaEntity() {
-//    }
+    public CinemaEntity() {
+    }
 
     @Override
-    public long getId() {
+    public int getId() {
     return id;
 }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

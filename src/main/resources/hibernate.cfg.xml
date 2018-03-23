@@ -10,9 +10,14 @@
         <property name="hbm2ddl.auto">update</property>
         <property name="connection.url">jdbc:mysql://localhost:3306/reserved_tickets</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="dialect">org.hibernate.dialect.MySQL55Dialect</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+
+            <!--Включить автоматическое управление сеансом Hibernate-->
+        <property name="hibernate.current_session_context_class">thread</property>
 
 
+        <mapping class="com.reservation.entity.BaseEntity"/>
         <mapping class="com.reservation.entity.CinemaEntity"/>
 
         <!-- DB schema will be updated if needed -->

@@ -28,7 +28,7 @@ public class CinemaServiceImpl implements CinemaService {
     }
 
     @Transactional
-    public CinemaEntity read(long id) {
+    public CinemaEntity read(int id) {
         return this.cinemaDao.read(id);
     }
 
@@ -38,7 +38,7 @@ public class CinemaServiceImpl implements CinemaService {
     }
 
     @Transactional
-    public void delete(long id) {
+    public void delete(int id) {
         this.cinemaDao.delete(id);
     }
 
