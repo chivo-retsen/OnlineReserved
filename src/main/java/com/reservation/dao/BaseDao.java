@@ -15,7 +15,7 @@ public interface BaseDao <T, PK extends Serializable> {
     void update(T entity);
 
     //delete
-    void delete(int id);
+    void delete(PK id);
 
     //list
     List<T> getAll();

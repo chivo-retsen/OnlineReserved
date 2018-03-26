@@ -14,8 +14,6 @@ import java.util.List;
 @Service
 public class CinemaServiceImpl extends BaseServiceImpl<CinemaEntity, Integer> implements CinemaService {
 
-    @Autowired
-    private CinemaDao cinemaDao;
 
     public CinemaServiceImpl(BaseDao<CinemaEntity, Integer> daoClass) {
         super(daoClass);

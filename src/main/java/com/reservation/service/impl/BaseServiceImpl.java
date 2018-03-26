@@ -35,7 +35,7 @@ public abstract class BaseServiceImpl<T, PK extends Serializable> implements Bas
     }
 
     @Transactional
-    public void delete(int id) {
+    public void delete(PK id) {
         baseDao.delete(id);
     }
 

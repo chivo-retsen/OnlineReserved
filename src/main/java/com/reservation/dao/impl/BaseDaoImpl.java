@@ -42,7 +42,7 @@ public abstract class BaseDaoImpl<T, PK extends Serializable> implements BaseDao
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(PK id) {
         Session session = getSessionAndBeginTransaction();
         T entity = session.get(aClass,id);
         session.delete(entity);
