@@ -1,8 +1,22 @@
 package com.reservation.dao;
 
+import java.io.Serializable;
 import java.util.List;
 
-public interface BaseDao {
+public interface BaseDao <T, PK extends Serializable> {
+
+    //create
+    void create(T entity);
+
+    //read
+    T read(PK id);
+
+    //update
+    void update(T entity);
+
+    //delete
+    void delete(int id);
+
     //list
-    List getAll();
+    List<T> getAll();
 }

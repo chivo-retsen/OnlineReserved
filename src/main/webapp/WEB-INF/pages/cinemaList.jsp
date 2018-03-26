@@ -22,10 +22,9 @@
             <td><a href="/deleteCinema/${cinema.id}">delete</a></td>
             <td><a href="/updateCinema/${cinema.id}">update</a></td>
 
-
         </tr>
 </#list>
 </table>
-<a href="createCinema.jsp">Create cinema</a>
+<a href="/createCinema">Create cinema</a>
 </body>
 </html>

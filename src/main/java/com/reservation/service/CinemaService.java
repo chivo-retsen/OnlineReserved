@@ -2,17 +2,7 @@ package com.reservation.service;
 
 import com.reservation.entity.CinemaEntity;
 
-public interface CinemaService extends BaseService{
+public interface CinemaService extends BaseService<CinemaEntity, Integer>{
 
-    //create
-    void create(CinemaEntity cinemaEntity);
 
-    //read
-    CinemaEntity read(int id);
-
-    //update
-    void update(CinemaEntity cinemaEntity);
-
-    //delete
-    void delete(int id);
 }

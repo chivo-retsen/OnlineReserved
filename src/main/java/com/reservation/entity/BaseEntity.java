@@ -1,9 +1,11 @@
 package com.reservation.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
+//@Entity
 @MappedSuperclass
-public abstract class BaseEntity {
+public abstract class BaseEntity  {//implements Serializable
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
