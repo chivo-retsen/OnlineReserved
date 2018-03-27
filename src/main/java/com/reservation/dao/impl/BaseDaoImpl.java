@@ -1,7 +1,6 @@
 package com.reservation.dao.impl;
 
 import com.reservation.dao.BaseDao;
-import com.reservation.entity.CinemaEntity;
 import com.reservation.utils.HibernateSessionFactory;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
