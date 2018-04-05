@@ -50,10 +50,7 @@
         <!--</property>-->
     <!--</bean>-->
 
-    <!--&lt;!&ndash;&lt;!&ndash;CinemaDao and CinemaService beans&ndash;&gt;&ndash;&gt;-->
-    <!--&lt;!&ndash;<bean id="CinemaDao" class="com.reservation.dao.impl.CinemaDaoImpl">&ndash;&gt;-->
-        <!--&lt;!&ndash;<property name="Session" ref="hibernate5AnnotatedSessionFactory"/>&ndash;&gt;-->
-    <!--&lt;!&ndash;</bean>&ndash;&gt;-->
+
 
     <!--&lt;!&ndash;<bean id="CinemaService" class="com.reservation.service.impl.CinemaServiceImpl">&ndash;&gt;-->
         <!--&lt;!&ndash;<property name="cinemaDao" ref="CinemaDao"/>&ndash;&gt;-->

@@ -5,12 +5,12 @@
 <hibernate-configuration>
     <session-factory>
 
-        <property name="connection.username">root</property>
-        <property name="connection.password">admin</property>
         <property name="hbm2ddl.auto">update</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="connection.url">jdbc:mysql://localhost:3306/reserved_tickets</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">admin</property>
         <property name="hibernate.show_sql">true</property>
 
             <!--Включить автоматическое управление сеансом Hibernate-->
@@ -19,9 +19,13 @@
 
         <mapping class="com.reservation.entity.BaseEntity"/>
         <mapping class="com.reservation.entity.CinemaEntity"/>
+        <mapping class="com.reservation.entity.FilmEntity"/>
+        <mapping class="com.reservation.entity.IndividualCabinetEntity"/>
+        <mapping class="com.reservation.entity.ReservedTicketEntity"/>
+        <mapping class="com.reservation.entity.SeanceEntity"/>
+        <mapping class="com.reservation.entity.SeatEntity"/>
+        <!--<mapping class="com.reservation.entity.UserEntity"/>-->
 
-        <!-- DB schema will be updated if needed -->
-        <!-- <property name="hbm2ddl.auto">update</property -->
 
     </session-factory>
 </hibernate-configuration>

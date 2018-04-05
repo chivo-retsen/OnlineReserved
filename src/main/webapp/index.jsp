@@ -6,11 +6,19 @@
     <title>Онлайн бронирование билетов</title>
 </head>
 <body>
-Hello, world!
+<h1>Онлайн бронирование билетов</h1>
 <br/>
-<a href="/cinema"> Cinema list</a>
+<a href="/film">Film list</a>
 <br/>
-<a href="/hello"> hello page</a>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<a href="/cinema">Cinema list</a>
+<br/>
+<a href="/hello">hello page</a>
 <br/>
 
 

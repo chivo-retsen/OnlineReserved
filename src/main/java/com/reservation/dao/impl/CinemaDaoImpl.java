@@ -12,5 +12,4 @@ public class CinemaDaoImpl extends BaseDaoImpl<CinemaEntity, Integer> implements
         super(CinemaEntity.class);
     }
 
-
 }

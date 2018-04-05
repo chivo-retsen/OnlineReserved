@@ -6,10 +6,12 @@ import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Repository;
 
 import java.io.Serializable;
 import java.util.List;
 
+@Repository
 public abstract class BaseDaoImpl<T, PK extends Serializable> implements BaseDao<T, PK> {
 
     private Class<T> aClass;
@@ -65,7 +67,6 @@ public abstract class BaseDaoImpl<T, PK extends Serializable> implements BaseDao
         SessionFactory sessionFactory = HibernateSessionFactory.getSessionFactory();
         if(sessionFactory == null){
             throw new RuntimeException("Session factory is null");
-
         }
 
         Session session = sessionFactory.getCurrentSession();

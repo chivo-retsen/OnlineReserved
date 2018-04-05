@@ -4,10 +4,10 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "cinema")
-public class CinemaEntity extends BaseEntity {  
+public class CinemaEntity  {
+                       //extends BaseEntity
 
-
-    @Basic
+    @Id
     @Column(name = "id")
     private int id;
 
@@ -23,7 +23,7 @@ public class CinemaEntity extends BaseEntity {
     public CinemaEntity() {
     }
 
-    @Override
+    //@Override
     public int getId() {
     return id;
 }
